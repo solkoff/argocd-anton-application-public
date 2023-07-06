@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/solkoff/nginx:0.1.1
+        image: docker.io/solkoff/nginx:0.1.0
         ports:
         - containerPort: 80
