@@ -6,4 +6,4 @@ namespace: dev
 
 images:
   - name: docker.io/solkoff/nginx
-    newTag: 0.1.3
+    newTag: 0.1.2
