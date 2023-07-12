@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-deploy-original
   namespace: app1
   labels:
     app: nginx
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/solkoff/nginx:0.1.6
+        image: nginx:1.23
         ports:
         - containerPort: 80
