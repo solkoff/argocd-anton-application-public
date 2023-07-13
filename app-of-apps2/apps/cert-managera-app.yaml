@@ -16,7 +16,7 @@ spec:
         - name: installCRDs
           value: 'true'
   destination:
-    name: gke_k8s-project2-371200_us-central1-c_sergei1 # external cluster
+    name: sergei1 # external cluster
     namespace: cert-manager
   syncPolicy:
     automated: {}
