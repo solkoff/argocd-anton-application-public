@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: gke_k8s-project2-371200_us-central1-c_sergei1  # external cluster
+    namespace: guestbook
+  project: default
+  source:
+    path: general/helm-guestbook
+    repoURL: https://github.com/morey-tech/argocd-example-apps.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
