@@ -1,0 +1,4 @@
+resources:
+- cert-managera-app.yaml
+- guestook-app.yaml
+- nginx-application-set.yaml
